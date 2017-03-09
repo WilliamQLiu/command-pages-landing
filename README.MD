@@ -9,3 +9,7 @@ To run locally on `localhost:3000`:
 
     npm start
 
+To serve on Firebase hosting (can test on `localhost:5000`):
+
+    firebase serve
+
