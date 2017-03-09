@@ -57,9 +57,12 @@
                 <h2 class="title">Where do I sign up?</h2>
                 <form role="form" id="signup-form" onsubmit="return signup(this)">
                     <fieldset>
-                        <p>We'll email you when the app is available</p>
-                        <input type="email" placeholder="Email Address, e.g. example@gmail.com" id="email" name="email-address" required="true">
-                        <input id="signup-button" class="button-primary signup" type="submit" value="Send">
+                        <p>We'll email you when the app is available. We appreciate any feedback.</p>
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="e.g. example@gmail.com" id="email" name="email-address" required="true">
+                        <label for="message">Feedback</label>
+                        <textarea placeholder="Optional feedback: e.g. what is your main pain point with command line interfaces?" id="feedback"></textarea>
+                        <input id="signup-button" class="button-primary" type="submit" value="Send">
                     </fieldset>
                 </form>
                 <p id="signup-success"></p>
