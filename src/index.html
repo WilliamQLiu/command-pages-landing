@@ -25,12 +25,7 @@
           firebase.initializeApp(config);
 
           var database = firebase.database();
-          var signupForm = document.getElementById('signup-form');
-          var signupButton = document.getElementById('signup-button');
-          var contactSuccess = document.getElementById('contact-success');
-          var contactError = document.getElementById('contact-error');
-          
-          function signup(formObj) {
+                    function signup(formObj) {
             formObj.async = true;
             var emailListReference = database.ref('email_list');
             var newEmailReference = emailListReference.push();
@@ -68,8 +63,8 @@
                         <input id="signup-button" class="button-primary signup" type="submit" value="Send">
                     </fieldset>
                 </form>
-                <p id="contact-success"></p>
-                <p id="contact-error"></p>
+                <p id="signup-success"></p>
+                <p id="signup-error"></p>
             </section>
 
 			<footer class="footer">
@@ -78,6 +73,12 @@
 		</main>
 
 		<script src="scripts/main.js"></script>
+        <script>
+          var signupForm = document.getElementById('signup-form');
+          var signupButton = document.getElementById('signup-button');
+          var signupSuccess = document.getElementById('signup-success');
+          var signupError = document.getElementById('signup-error');
+        </script>
 
 	</body>
 </html>
