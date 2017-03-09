@@ -25,14 +25,13 @@
           firebase.initializeApp(config);
 
           var database = firebase.database();
-                    function signup(formObj) {
+          function signup(formObj) {
             formObj.async = true;
             var emailListReference = database.ref('email_list');
-            var newEmailReference = emailListReference.push();
-            newEmailReference.set({
+            var newEmailReference = emailListReference.push({
                 'email': formObj.email.value
-            });
-            var path = newEmailReference.toString();
+            }, onMessageComplete);
+            return false;
           }
         </script>
 	</head>
@@ -78,6 +77,17 @@
           var signupButton = document.getElementById('signup-button');
           var signupSuccess = document.getElementById('signup-success');
           var signupError = document.getElementById('signup-error');
+          var onMessageComplete = function(error) {
+            debugger
+            signupButton.disabled = false;
+            if (error) {
+              signupError.innerHTML = 'Sorry, could not sign up. Please try later.';
+            } else {
+                signupSuccess.innerHTML = 'Sign up successful. Thanks!';
+                signupForm.style.display = 'none';
+            }
+          };
+
         </script>
 
 	</body>
