@@ -28,8 +28,10 @@
           function signup(formObj) {
             formObj.async = true;
             var emailListReference = database.ref('email_list');
+            debugger
             var newEmailReference = emailListReference.push({
-                'email': formObj.email.value
+                'email': formObj.email.value,
+                'feedback': formObj.feedback.value
             }, onMessageComplete);
             return false;
           }
