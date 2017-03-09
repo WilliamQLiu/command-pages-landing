@@ -3,13 +3,6 @@
 	padding-top: 3rem;
 }
 
-#home {
-	background: #f4f5f6;
-	position: relative;
-	max-height: 30vh;
-    padding-bottom: 1.5rem;
-}
-
 .thumbnail {
 	left: 50%;
 	position: absolute;
