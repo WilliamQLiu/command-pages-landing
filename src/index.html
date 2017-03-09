@@ -23,6 +23,20 @@
             messagingSenderId: "91864777580"
           };
           firebase.initializeApp(config);
+
+          var database = firebase.database();
+          var signupForm = document.getElementById('signup-form');
+          var signupButton = document.getElementById('signup-button');
+
+          function signup(formObj) {
+            formObj.async = true;
+            var emailListReference = database.ref('email_list');
+            var newEmailReference = emailListReference.push();
+            newEmailReference.set({
+                'email': formObj.email.value
+            });
+            var path = newEmailReference.toString();
+          }
         </script>
 	</head>
 	<body>
@@ -45,11 +59,11 @@
 
             <section class="container">
                 <h2 class="title">Where do I sign up?</h2>
-                <form>
+                <form role="form" id="signup-form" onsubmit="return signup(this)">
                     <fieldset>
                         <p>We'll email you when the app is available</p>
-                        <input type="email" placeholder="Email Address" id="email">
-                        <input class="button-primary signup" type="submit" value="Send">
+                        <input type="email" placeholder="Email Address, e.g. example@gmail.com" id="email" required>
+                        <input id="signup-button" class="button-primary signup" type="submit" value="Send">
                     </fieldset>
                 </form>
             </section>
