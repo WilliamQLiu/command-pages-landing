@@ -73,3 +73,5 @@ typings/
 !/test/sample/bower.json
 /npm-shrinkwrap.json#
 
+# Dist
+dist/
