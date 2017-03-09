@@ -1,15 +1,13 @@
 .container {
 	max-width: 80.0rem;
-	padding-bottom: 7.5rem;
-	padding-top: 7.5rem;
+	padding-top: 3rem;
 }
 
 #home {
 	background: #f4f5f6;
-	height: 30vh;
 	position: relative;
 	max-height: 30vh;
-	min-width: 100vw;
+    padding-bottom: 1.5rem;
 }
 
 .thumbnail {
@@ -18,3 +16,12 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+
+#email {
+    width: 70%
+}
+
+.signup {
+    width: 25%
+}
+
