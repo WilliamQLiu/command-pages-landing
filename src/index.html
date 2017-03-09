@@ -10,6 +10,20 @@
 		<link rel="stylesheet" href="lib/normalize.css/normalize.css">
 		<link rel="stylesheet" href="lib/milligram/dist/milligram.min.css">
 		<link rel="stylesheet" href="styles/main.css">
+
+        <!-- Firebase is used for db writes for email address collection -->
+        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyAKfCUrO3W8TJYRGLuadBd2_jqvX8tOTlI",
+            authDomain: "landing-page-7815c.firebaseapp.com",
+            databaseURL: "https://landing-page-7815c.firebaseio.com",
+            storageBucket: "landing-page-7815c.appspot.com",
+            messagingSenderId: "91864777580"
+          };
+          firebase.initializeApp(config);
+        </script>
 	</head>
 	<body>
 
