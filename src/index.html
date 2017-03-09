@@ -27,7 +27,9 @@
           var database = firebase.database();
           var signupForm = document.getElementById('signup-form');
           var signupButton = document.getElementById('signup-button');
-
+          var contactSuccess = document.getElementById('contact-success');
+          var contactError = document.getElementById('contact-error');
+          
           function signup(formObj) {
             formObj.async = true;
             var emailListReference = database.ref('email_list');
@@ -62,10 +64,12 @@
                 <form role="form" id="signup-form" onsubmit="return signup(this)">
                     <fieldset>
                         <p>We'll email you when the app is available</p>
-                        <input type="email" placeholder="Email Address, e.g. example@gmail.com" id="email" required="true">
+                        <input type="email" placeholder="Email Address, e.g. example@gmail.com" id="email" name="email-address" required="true">
                         <input id="signup-button" class="button-primary signup" type="submit" value="Send">
                     </fieldset>
                 </form>
+                <p id="contact-success"></p>
+                <p id="contact-error"></p>
             </section>
 
 			<footer class="footer">
