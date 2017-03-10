@@ -21,3 +21,7 @@ To deploy to Firebase on a live site:
 
     firebase deploy
 
+## License
+
+This project is licensed under the MIT License
+
