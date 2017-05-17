@@ -9,9 +9,13 @@ Check out an example site [here](https://www.commandpages.com)
 
 ## Getting Started
 
+Install __nodejs__ and __npm__.
+
 To run locally on `localhost:3000`:
 
     npm start
+
+Install firebase tools with `npm install -g firebase-tools`.
 
 To run locally with Firebase on `localhost:5000`:
 
