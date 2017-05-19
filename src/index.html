@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Command Pages is a graphical user interface for Linux commands">
-		<title>Command Pages - a GUI for Linux commands</title>
+		<meta name="description" content="Command Pages is a graphical user interface for documenting your shell commands">
+		<title>Command Pages - a GUI for documenting your shell commands</title>
 		<link rel="icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 		<link rel="stylesheet" href="styles/normalize.css">
@@ -42,24 +42,37 @@
 
 			<section class="container">
                 <h1>COMMAND PAGES</h1>
-                <p>a graphical interface for documenting commands</p>
-                <img src="images/runcommand.gif" alt="Run Command" style="width: 75%; height: 75%;">
-			</section>
+                <p>a graphical interface for documenting your shell commands</p>
+            </section>
 
-			<section class="container">
-				<h2 class="title">What can I do with this tool?</h2>
+            <section class="container">
+                <h2 class="title">What does the app do?</h2>
                 <ul>
-                    <li>View real world examples of how to use linux commands</li>
+                    <li>View real world examples of how to use unix commands</li>
                     <li>Save your frequently used commands and options</li>
                     <li>Add personal notes to your saved commands</li>
                 </ul>
             </section>
 
+			<section class="container">
+				<h2 class="title">Where do I download?</h2>
+                <p>Choose your platform and download for free:</p>
+                <ul>
+                    <li><a href="https://s3.amazonaws.com/commandpages/command-pages-darwin-x64-0-0-1.zip" target="_blank" onclick="ga('send', 'event', {eventCategory: 'Download Mac App', eventAction: 'click', eventLabel: 'Download Mac App v0.0.1', transport: 'beacon'})">Mac</a></li>
+                    <li><a href="https://s3.amazonaws.com/commandpages/command-pages-linux-x64-0-0-1.zip" target="_blank" onclick="ga('send', 'event', {eventCategory: 'Download Linux App', eventAction: 'click', eventLabel: 'Download Linux App v0.0.1', transport: 'beacon'})" >Linux</a></li>
+                </ul>
+            </section>
+
+			<section class="container">
+                <h2 class="title">How does it work?</h2>
+                <p>Enter a shell command and Command Pages parses the text into individual commands. All you have to do is type in your personal notes.</p>
+                <img src="images/runcommand.gif" alt="Run Command" style="width: 75%; height: 75%; overflow: hidden;">
+            </section>
+
             <section class="container">
-                <h2 class="title">Where do I sign up?</h2>
+                <h2 class="title">Want to give some feedback?</h2>
                 <form role="form" id="signup-form" onsubmit="return signup(this)">
                     <fieldset>
-                        <p>We'll email you when the app is available. We appreciate any feedback.</p>
                         <label for="email">Email</label>
                         <input type="email" placeholder="e.g. example@gmail.com" id="email" name="email-address" required="true">
                         <label for="message">Feedback</label>
@@ -72,6 +85,14 @@
             </section>
 
 			<footer class="footer">
+                <div style="margin-left: 2rem;">
+                    <span>Find me on:</span>
+                    <a href="https://github.com/WilliamQLiu/" target="_blank" onclick="ga('send', 'event', {eventCategory: 'Outbound Link', eventAction: 'click', eventLabel: 'GitHub Link', transport: 'beacon'})">GitHub</a>
+                    <span> | </span>
+                    <a href="https://www.linkedin.com/in/williamqliu/" target="_blank" onclick="ga('send', 'event', {eventCategory: 'Outbound Link', eventAction: 'click', eventLabel: 'LinkedIn Link', transport: 'beacon'})">LinkedIn</a>
+                    <span> | </span>
+                    <a href="https://www.twitter.com/WilliamQLiu" target="_blank" onclick="ga('send', 'event', {eventCategory: 'Outbound Link', eventAction: 'click', eventLabel: 'Twitter Link', transport: 'beacon'})">Twitter</a>
+                </div>
 			</footer>
 
 		</main>
